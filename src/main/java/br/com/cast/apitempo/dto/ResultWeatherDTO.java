@@ -2,7 +2,6 @@ package br.com.cast.apitempo.dto;
 
 public class ResultWeatherDTO {
 	
-	private String id;
 	private String data;
 	private String tempmin;
 	private String tempmax;
@@ -11,12 +10,13 @@ public class ResultWeatherDTO {
 	private String icon;
 	private String speed;
 	private String cidade;
+	private String main;
 	
-	public String getId() {
-		return id;
+	public String getMain() {
+		return main;
 	}
-	public void setId(String id) {
-		this.id = id;
+	public void setMain(String main) {
+		this.main = main;
 	}
 	public String getCidade() {
 		return cidade;

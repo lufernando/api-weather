@@ -3,6 +3,7 @@ package br.com.cast.apitempo.dto;
 public class WeatherDescriptionDTO {
 	
 	private String main;
+	
 	private String icon;
 	
 	public String getMain() {

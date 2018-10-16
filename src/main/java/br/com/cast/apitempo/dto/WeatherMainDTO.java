@@ -15,6 +15,7 @@ public class WeatherMainDTO {
 	
 	@JsonProperty("humidity")
 	private String umidade;
+	
 
 	public String getTempmin() {
 		return tempmin;

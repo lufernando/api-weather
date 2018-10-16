@@ -2,14 +2,15 @@ package br.com.cast.apitempo.dto;
 
 public class WeatherWindDTO {
 	
-	private Double speed;
+	private String speed;
 
-	public Double getSpeed() {
+	public String getSpeed() {
 		return speed;
 	}
 
-	public void setSpeed(Double speed) {
+	public void setSpeed(String speed) {
 		this.speed = speed;
 	}
+
 	
 }

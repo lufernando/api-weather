@@ -2,8 +2,11 @@ package br.com.cast.apitempo.dto;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class WeatherDTO {
 	
+	@JsonProperty("list")
 	private List<WeatherDataDTO> list;
 
 	public List<WeatherDataDTO> getList() {

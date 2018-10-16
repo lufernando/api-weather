@@ -1,5 +1,9 @@
 package br.com.cast.apitempo.entity;
 
+
+import java.util.Date;
+
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -12,22 +16,36 @@ import javax.persistence.Table;
 public class Weather {
 	
 	@Id
-	@SequenceGenerator(sequenceName = "seq_tempo_id", name = "gerador_end_seq", allocationSize = 1, schema = "api")
+	@SequenceGenerator(sequenceName = "tempo_id_seq", name = "gerador_end_seq", allocationSize = 1, schema = "api")
 	@GeneratedValue(generator = "gerador_end_seq", strategy = GenerationType.SEQUENCE)
-	private String id;
-	private String data;
+	private Integer id;
+	
+	@Column(name="data")
+	private Date data;
 	private String tempmin;
 	private String tempmax;
 	private String pressao;
 	private String umidade;
+	private String main;
+	
+	@Column(name="icone")
 	private String icon;
+	
+	@Column(name="velocidade")
 	private String speed;
+	
 	private String cidade;
 	
-	public String getId() {
+	public String getMain() {
+		return main;
+	}
+	public void setMain(String main) {
+		this.main = main;
+	}
+	public Integer getId() {
 		return id;
 	}
-	public void setId(String id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 	public String getCidade() {
@@ -36,10 +54,10 @@ public class Weather {
 	public void setCidade(String cidade) {
 		this.cidade = cidade;
 	}
-	public String getData() {
+	public Date getData() {
 		return data;
 	}
-	public void setData(String data) {
+	public void setData(Date data) {
 		this.data = data;
 	}
 	public String getTempmin() {
